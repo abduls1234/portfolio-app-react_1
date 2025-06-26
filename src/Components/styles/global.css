@@ -1,0 +1,97 @@
+:root {
+  /* Light theme colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --border-color: #e1e5e9;
+  --social-icon-color: #000000;
+  --email-line-color: #000000;
+  
+  /* Gradients */
+  --gradient-hello: linear-gradient(90deg, #32F6F6 0%, #A6A79F 100%);
+  --gradient-download: linear-gradient(90deg, #DF580C 0%, #FD993D 100%);
+  --gradient-contact: linear-gradient(90deg, #434343 0%, #000000 100%);
+  
+  /* Font */
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --border-color: #404040;
+  --social-icon-color: #ffffff;
+  --email-line-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 80px 0;
+}
+
+/* Utility classes */
+.gradient-text {
+  background: var(--gradient-hello);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 3px solid #FFFFFF;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 15px 30px 0px #00000060;
+}
+
+.btn-download {
+  background: var(--gradient-download);
+  box-shadow: 0px 10px 25px 0px #00000040;
+  color: white;
+  margin-right: 20px;
+}
+
+.btn-contact {
+  background: var(--gradient-contact);
+  box-shadow: 0px 10px 25px 0px #00000040;
+  color: white;
+}
